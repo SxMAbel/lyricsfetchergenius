@@ -22,14 +22,14 @@ module.exports = async function (options) {
     const Headers = {
       Authorization: "Bearer" + APIKey,
     };
-    const rawData = await axios.get(
+    const { data } = await axios.get(
       AuthHeader ? RequestURL : `${RequestURL}&access_token=${APIKey}`,
       AuthHeader && { Headers }
     );
-    if (rawData.data.response.hits.length === 0) return null;
-    const results = rawData.data.response.hits.map((value) => {
-      const { Full_Title, Song_Art_Image_URL, ID, URL } = value;
-      return { ID, Title: Full_Title, Album_Art: Song_Art_Image_URL, URL };
+    if (data.response.hits.length === 0) return null;
+    const results = data.response.hits.map((value) => {
+      const { full_title, song_art_image_url, id, url } = value.result;
+      return { id, Title: full_title, Album_Art: song_art_image_url, url };
     });
     return results;
   } catch (error) {
