@@ -1,0 +1,32 @@
+{
+  "name": "lyricsfetchergenius",
+  "version": "0.0.1",
+  "description": "A npm package to fetch lyrics from genius api",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SxMAbel/Genius_Lyrics_API.git"
+  },
+  "author": "Abel Purnwasy",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/SxMAbel/Genius_Lyrics_API/issues"
+  },
+  "homepage": "https://github.com/SxMAbel/Genius_Lyrics_API#readme",
+  "keywords": [
+    "scraper",
+    "fetcher",
+    "lyrics",
+    "genius",
+    "genius-lyrics-api",
+    "genius-lyrics",
+    "genius-api"
+  ],
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
