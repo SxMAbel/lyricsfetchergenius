@@ -1,6 +1,6 @@
-#Lyrics Fetcher Genius
+# Lyrics Fetcher Genius
 
-#How to Use
+# How to Use
 
 Using GetLyrics:
 ```js
