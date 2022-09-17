@@ -14,13 +14,13 @@ module.exports = async function (ID, APIKey) {
         response: { Song },
       },
     } = await axios.get(`${songIdURL}${ID}&access_token=${APIKey}`);
-    const lyrics = await RetrieveLyrics(Song.URL);
+    const lyrics = await RetrieveLyrics(Song.url);
     return {
-      ID: Song.ID,
-      Title: Song.Full_Title,
-      URL: Song.URL,
+      id: Song.id,
+      Title: Song.full_title,
+      url: Song.url,
       lyrics,
-      Album_Art: Song.Song_Art_Image_URL,
+      Album_Art: Song.song_art_image_url,
     };
   } catch (error) {
     throw error;

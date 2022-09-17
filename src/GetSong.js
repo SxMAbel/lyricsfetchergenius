@@ -10,13 +10,13 @@ module.exports = async function (options) {
     OptionsChecker(options);
     const results = await SearchSong(options);
     if (!results) return null;
-    const lyrics = await RetrieveLyrics(results[0].URL);
+    const lyrics = await RetrieveLyrics(results[0].url);
     return {
-      ID: results[0].ID,
+      id: results[0].id,
       Title: results[0].Title,
-      URL: results[0].URL,
+      url: results[0].url,
       lyrics,
-      Album_Art: results[0].Song_Art_Image_URL,
+      Album_Art: results[0].song_art_image_url,
     };
   } catch (error) {
     throw error;

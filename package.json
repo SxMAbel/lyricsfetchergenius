@@ -1,6 +1,6 @@
 {
   "name": "lyricsfetchergenius",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A npm package to fetch lyrics from genius api",
   "main": "index.js",
   "scripts": {
