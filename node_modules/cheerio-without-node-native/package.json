@@ -1,0 +1,48 @@
+{
+  "name": "cheerio-without-node-native",
+  "version": "1.0.0-rc.2",
+  "description": "Cheerio build that excludes node native modules so that you can use it in platforms like React Native.",
+  "license": "MIT",
+  "keywords": [
+    "htmlparser",
+    "jquery",
+    "selector",
+    "scraper",
+    "parser",
+    "html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oyyd/cheerio-without-node-native"
+  },
+  "main": "./index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "engines": {
+    "node": ">= 0.6"
+  },
+  "dependencies": {
+    "css-select": "~1.2.0",
+    "dom-serializer": "~0.1.0",
+    "entities": "~1.1.1",
+    "htmlparser2-without-node-native": "^3.9.0",
+    "lodash": "^4.1.0",
+    "parse5": "^3.0.1"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.0",
+    "coveralls": "^2.11.9",
+    "expect.js": "~0.3.1",
+    "istanbul": "^0.4.3",
+    "jquery": "^3.0.0",
+    "jsdom": "^9.2.1",
+    "jshint": "^2.9.2",
+    "mocha": "^3.1.2",
+    "xyz": "~1.1.0"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}

@@ -1,8 +1,9 @@
-# Lyrics Fetcher Genius
+# Lyrics Fetcher Genius 
 
 # How to Use
 
 Using GetLyrics:
+
 ```js
 const lyricsfetchergenius = require("lyricsfetchergenius");
 // example of options 1
@@ -25,11 +26,13 @@ var options = {
   OptimizeQuery: true,
 };
 
-try {
-  let lyrics = await lyricsfetchergenius.GetLyrics(options);
-  lyrics = lyrics.replace(/(\[.+\])/g, ""); // optional
-  console.log(lyrics); // you can do somthing else with it other than console.log
-} catch (error) {
-  throw error;
-}
+async () => {
+  try {
+    let lyrics = await lyricsfetchergenius.GetLyrics(options);
+    lyrics = lyrics.replace(/(\[.+\])/g, ""); // optional
+    console.log(lyrics); // you can do somthing else with it other than console.log
+  } catch (error) {
+    throw error;
+  }
+};
 ```

@@ -8,12 +8,13 @@ const songIdURL = "https://api.genius.com/songs/";
  */
 module.exports = async function (ID, APIKey) {
   if (!ID) throw "No ID was provided";
+  if (!APIKey) throw "No APIKey was provided";
   try {
     let {
       data: {
         response: { Song },
       },
-    } = await axios.get(`${songIdURL}${ID}&access_token=${APIKey}`);
+    } = await axios.get(`${songIdURL}${ID}?access_token=${APIKey}`);
     const lyrics = await RetrieveLyrics(Song.url);
     return {
       id: Song.id,
