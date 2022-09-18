@@ -2,13 +2,13 @@
  * @param {Object} options
  */
 function OptionsChecker(options) {
-  if (!options.APIKey) {
+  if (!("APIKey" in options) || !options.APIKey) {
     throw '"APIKey" property must be present in options';
   }
-  if (!options.Title) {
+  if (!("Title" in options) || !options.Title) {
     throw '"Title" property must be present in options';
   }
-  if (!options.Artist) {
+  if (!("Artist" in options) || !options.Artist) {
     throw '"Artist" property must be present in options';
   }
 }

@@ -11,6 +11,15 @@ npm install --save lyricsfetchergenius@latest
 # Methods and Examples in Javascript
 
 [Get the genius APIKey/Token here](https://genius.com/developers)
+
+**Using Typescript**
+
+```ts
+import lyricsfetchergenius from "lyricsfetchergenius";
+```
+
+**Using Javascript**
+
 Using GetLyrics:
 
 ```js
